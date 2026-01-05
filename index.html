@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,100 +7,179 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
         body { font-family: 'Lato', sans-serif; }
         h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
     </style>
 </head>
-<body class="bg-stone-50 text-stone-800 antialiased">
+<body class="bg-stone-50 text-stone-800 font-sans selection:bg-green-700/20">
 
-    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="flex items-center gap-3">
-                <img src="logo.png" onerror="this.style.display='none'" alt="Logo" class="h-12 w-auto object-contain"> 
-                <span class="text-xl font-serif font-bold tracking-widest text-amber-900">APHARWAT</span>
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm py-2">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="relative">
+                    <img alt="Apharwat Logo" class="h-12 md:h-16 w-auto object-contain relative transition-transform group-hover:scale-105" src="logo.png">
+                </div>
+                <span class="text-xl font-serif font-bold tracking-widest text-amber-900 hidden md:block">APHARWAT</span>
             </a>
-            
-            <div class="hidden md:flex items-center space-x-8 text-sm font-bold text-stone-600 uppercase tracking-wide">
-                <a href="#about" class="hover:text-amber-700 transition">Our Story</a>
-                <a href="#products" class="hover:text-amber-700 transition">Products</a>
-                <a href="#process" class="hover:text-amber-700 transition">Process</a>
-                <a href="#contact" class="px-6 py-3 bg-amber-900 text-white rounded hover:bg-amber-800 transition shadow-lg">
-                    Shop Now
-                </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#home" class="text-sm font-medium transition-colors hover:text-green-700">Home</a>
+                <a href="#process" class="text-sm font-medium transition-colors hover:text-green-700">Our Process</a>
+                <a href="#comparison" class="text-sm font-medium transition-colors hover:text-green-700">Why Kashmiri?</a>
+                <a href="#recipes" class="text-sm font-medium transition-colors hover:text-green-700">Recipes</a>
+                <a href="#contact" class="text-sm font-medium transition-colors hover:text-green-700">Contact</a>
+                <a href="#contact" class="bg-green-700 hover:bg-green-800 text-white px-5 py-2 rounded-full text-sm font-medium transition-transform hover:scale-105 inline-block">Shop Now</a>
             </div>
         </div>
     </nav>
 
-    <header class="relative h-screen flex items-center justify-center bg-stone-900 text-white overflow-hidden">
+    <section id="home" class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-stone-900">
         <div class="absolute inset-0 z-0">
-            <img src="tree.jpg" alt="Walnut Tree" class="w-full h-full object-cover opacity-60">
+            <img alt="Kashmir Valley" class="w-full h-full object-cover opacity-60" src="hero.png">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60"></div>
         </div>
-        
-        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto mt-16">
-            <span class="text-amber-400 tracking-[0.3em] text-xs md:text-sm font-bold uppercase mb-4 block">Straight from the Himalayas</span>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">
-                Pure. Premium. <br/><span class="text-amber-400">Apharwat.</span>
-            </h1>
-            <a href="#products" class="mt-8 inline-block px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white rounded text-lg font-bold transition shadow-xl border-2 border-amber-600">
-                View Our Packaging
-            </a>
-        </div>
-    </header>
-
-    <section id="products" class="py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl text-amber-900 mb-4 font-serif">Our Premium Collection</h2>
-            </div>
-            <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-                <div class="group relative rounded-2xl overflow-hidden shadow-2xl border border-stone-100">
-                    <img src="box.jpg" alt="Walnut Box" class="w-full h-[500px] object-cover group-hover:scale-105 transition duration-700">
-                </div>
-                <div class="space-y-8">
-                    <div class="rounded-2xl overflow-hidden shadow-xl h-64 relative">
-                        <img src="kernels.jpg" alt="Kernels" class="w-full h-full object-cover">
-                    </div>
-                    <div class="bg-stone-50 p-8 rounded-2xl border border-stone-100">
-                        <h3 class="text-2xl font-serif text-amber-900 mb-4">Premium Kernel Box (1kg)</h3>
-                        <p>Vacuum packed inside mono-carton to prevent oxidation.</p>
-                    </div>
+        <div class="container relative z-10 px-4 text-center md:text-left">
+            <div class="max-w-3xl mx-auto md:mx-0">
+                <span class="inline-block py-1 px-3 rounded-full bg-white/20 backdrop-blur-sm text-white text-xs md:text-sm font-medium tracking-wider mb-6 border border-white/30 uppercase">Apharwat: From the Heights of Nature</span>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight mb-6 drop-shadow-lg">Pure, Premium Walnuts from the Peaks of Kashmir</h1>
+                <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl font-light leading-relaxed drop-shadow-md">Vacuum-sealed freshness from our clean facility to your doorstep. Experience the rich, creamy taste of authentic Himalayan produce.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-medium text-lg shadow-lg flex items-center justify-center gap-2 group">
+                        Order Now <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-20 bg-stone-100 text-center">
-        <div class="container mx-auto px-6 max-w-3xl">
-            <h2 class="text-4xl text-amber-900 mb-8 font-serif">The Apharwat Promise</h2>
-            <p class="text-stone-600 leading-loose text-lg">
-                We bridge the gap between the organic abundance of Kashmir and modern hygiene. 
-                Sourced from high-altitude orchards, our walnuts are processed in a clean facility.
-            </p>
-        </div>
-    </section>
-
-    <section id="process" class="py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-4xl text-amber-900 mb-6 font-serif">Clean Facility Processing</h2>
-                    <p class="text-stone-600 mb-6">Our facility ensures no dust or foreign particles enter your food.</p>
-                </div>
+    <section class="py-20 md:py-32 bg-white overflow-hidden">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="relative">
-                    <img src="process.jpg" alt="Processing" class="rounded-2xl shadow-2xl w-full object-cover h-[400px]">
+                    <div class="absolute -inset-4 bg-amber-100 rounded-2xl -z-10 rotate-3"></div>
+                    <img alt="Premium Walnut Packaging" class="rounded-xl shadow-2xl w-full max-w-md mx-auto md:mr-auto hover:scale-[1.02] transition-transform duration-500" src="box.png">
+                </div>
+                <div class="space-y-6">
+                    <span class="text-green-700 font-medium tracking-wider uppercase text-sm">Our Heritage</span>
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold text-stone-900">The Apharwat Story</h2>
+                    <p class="text-lg text-stone-600 leading-relaxed">Named after the majestic Apharwat Peak, our brand represents the pinnacle of purity. We bridge the gap between traditional Kashmiri horticulture and modern processing technology.</p>
+                    <div class="pt-4 flex gap-8">
+                        <div><h4 class="text-4xl font-serif font-bold text-amber-600 mb-1">100%</h4><p class="text-sm text-stone-500">Kashmiri Origin</p></div>
+                        <div><h4 class="text-4xl font-serif font-bold text-amber-600 mb-1">0%</h4><p class="text-sm text-stone-500">Preservatives</p></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 bg-stone-900 text-white text-center">
-        <h2 class="text-4xl mb-4 font-serif">Ready to Order?</h2>
-        <p class="text-stone-400 mb-8">Contact us for bulk pricing</p>
-        <p class="text-2xl font-serif text-amber-500">+91 99999 00000</p>
-        <p>contact@apharwat.com</p>
+    <section id="process" class="py-20 bg-stone-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-4">The Processing Journey</h2>
+                <p class="text-stone-500 max-w-2xl mx-auto">From tree to vacuum seal, we ensure perfection.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 space-y-8 md:space-y-0">
+                <div class="flex flex-col md:flex-row gap-6 items-center">
+                    <div class="flex-1 text-center md:text-right">
+                        <div class="inline-block w-12 h-12 bg-green-700 text-white rounded-full text-2xl font-bold leading-relaxed mb-2">1</div>
+                        <h3 class="text-xl font-bold mb-2">Harvesting</h3>
+                        <p class="text-stone-600 text-sm">Hand-picked from high-altitude orchards.</p>
+                    </div>
+                    <div class="flex-1">
+                        <img src="harvest.png" alt="Harvesting" class="rounded-xl shadow-lg w-full h-48 object-cover">
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row-reverse gap-6 items-center">
+                    <div class="flex-1 text-center md:text-left">
+                        <div class="inline-block w-12 h-12 bg-green-700 text-white rounded-full text-2xl font-bold leading-relaxed mb-2">2</div>
+                        <h3 class="text-xl font-bold mb-2">Cleaning & Sorting</h3>
+                        <p class="text-stone-600 text-sm">Manual grading for size and color.</p>
+                    </div>
+                    <div class="flex-1">
+                        <img src="sorting.png" alt="Sorting" class="rounded-xl shadow-lg w-full h-48 object-cover">
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-6 items-center">
+                    <div class="flex-1 text-center md:text-right">
+                        <div class="inline-block w-12 h-12 bg-green-700 text-white rounded-full text-2xl font-bold leading-relaxed mb-2">3</div>
+                        <h3 class="text-xl font-bold mb-2">Precision Drying</h3>
+                        <p class="text-stone-600 text-sm">Hot air drying to exact moisture levels.</p>
+                    </div>
+                    <div class="flex-1">
+                        <img src="drying.png" alt="Drying" class="rounded-xl shadow-lg w-full h-48 object-cover">
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row-reverse gap-6 items-center">
+                    <div class="flex-1 text-center md:text-left">
+                        <div class="inline-block w-12 h-12 bg-green-700 text-white rounded-full text-2xl font-bold leading-relaxed mb-2">4</div>
+                        <h3 class="text-xl font-bold mb-2">Vacuum Sealing</h3>
+                        <p class="text-stone-600 text-sm">Locked in freshness with O2 absorbers.</p>
+                    </div>
+                    <div class="flex-1">
+                        <img src="vacuum.png" alt="Vacuum Sealing" class="rounded-xl shadow-lg w-full h-48 object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <section id="comparison" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center bg-stone-900 rounded-3xl p-8 md:p-12 text-white">
+                <div>
+                    <h2 class="text-3xl font-serif font-bold mb-6">Why Kashmiri Walnuts?</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-400 mt-1"></i> <span><strong>High Oil Content:</strong> Rich, creamy texture naturally occurring in Himalayan soil.</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-400 mt-1"></i> <span><strong>Organic Growth:</strong> 100% natural farming without synthetic pesticides.</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-400 mt-1"></i> <span><strong>Omega-3 Rich:</strong> Higher density of brain-boosting fatty acids.</span></li>
+                    </ul>
+                </div>
+                <div class="bg-white/10 p-8 rounded-2xl border border-white/20">
+                    <h3 class="text-xl font-bold text-stone-400 mb-4">Imported Walnuts</h3>
+                    <ul class="space-y-3 text-stone-300 text-sm">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-xmark text-red-400"></i> Low oil content, dry texture.</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-xmark text-red-400"></i> Chemically bleached shells.</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-xmark text-red-400"></i> Mass-produced for size, not taste.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-stone-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-serif font-bold mb-4">Get in Touch</h2>
+                <p class="text-stone-500">Interested in bulk orders? Contact us directly.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-stone-100 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-center md:text-left">
+                    <p class="text-sm text-stone-500 mb-1">Call / WhatsApp</p>
+                    <p class="text-2xl font-bold text-green-700">+91 6005956665</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <p class="text-sm text-stone-500 mb-1">Email Us</p>
+                    <p class="text-xl font-medium">info@apharwatfoods.com</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <p class="text-sm text-stone-500 mb-1">FSSAI License</p>
+                    <p class="font-mono bg-stone-100 px-3 py-1 rounded">11025999000098</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-stone-900 text-stone-400 py-12 border-t border-stone-800">
+        <div class="container mx-auto px-4 text-center">
+            <img src="logo.png" alt="Logo" class="h-12 mx-auto mb-4 opacity-80 invert">
+            <p class="mb-4">&copy; 2026 Apharwat Walnuts. All rights reserved.</p>
+            <p class="text-xs">Wanbal Nowgam Srinagar, J&K (UT)-190015</p>
+        </div>
+    </footer>
 
 </body>
 </html>
